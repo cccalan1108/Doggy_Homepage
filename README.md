@@ -1,5 +1,5 @@
 
-# HW#1 – The World of Dogs（個人首頁）
+# The World of Dogs（個人首頁）
 
 作品說明：以 awwwards 風格為靈感的「狗狗主題首頁」，前端（包含HTML / CSS / TypeScript）。包含圖片、Lightbox、即時時鐘供使用者查看時間。
 
