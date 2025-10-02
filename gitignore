@@ -1,0 +1,19 @@
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
+
+# Node / Build
+node_modules/
+dist/
+build/
+.tmp/
+.cache/
+
+# Env / Misc
+.env
+.env.*
+*.local

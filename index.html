@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <title>．jay 風格個人首頁（HW#1）</title>
+  <meta name="description" content="HW#1：jay 風格個人首頁" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">跳到主要內容</a>
+
+  <header class="site-header" role="banner">
+    <div class="container row between center-v">
+      <a class="brand" href="#" aria-label="回到首頁"><span class="logo">The World of Dogs</span></a>
+      <nav class="nav" aria-label="主要導覽">
+        <button id="menuBtn" class="icon-btn" aria-expanded="false" aria-controls="navLinks" aria-label="開啟選單">☰</button>
+        <ul id="navLinks" class="nav-links">
+          <li><a href="#">Explore</a></li>
+          <li><a href="#">More Info</a></li>
+          <li><a href="#">Introduction</a> <span class="pill new">New</span></li>
+          <li><a href="#">Setting</a></li>
+          <li><a href="#">Markets</a></li>
+        </ul>
+      </nav>
+      <div class="header-ctas">
+        <div class="search"><input id="q" type="search" placeholder="Search by inspiration" aria-label="搜尋靈感"></div>
+        <a class="link" href="#">Log in</a>
+        <a class="link" href="#">Sign Up</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container">
+        <div class="kpi">
+          <time id="sotdDate" class="pill soft" aria-live="polite">--</time>
+        </div>
+
+        <script>
+          (function () {
+            var el = document.getElementById('sotdDate');
+            if (!el) return;
+          
+            function pad(n){ return (n<10 ? '0' : '') + n; }
+            function tick(){
+              var d = new Date();
+              var text =
+                d.getFullYear() + '-' + pad(d.getMonth()+1) + '-' + pad(d.getDate()) + ' ' +
+                pad(d.getHours()) + ':' + pad(d.getMinutes()) + ':' + pad(d.getSeconds());
+          
+              el.textContent = text;             
+              if ('dateTime' in el) el.dateTime = d.toISOString(); 
+            }
+          
+            tick();                
+            setInterval(tick, 1000); 
+          })();
+          </script>
+
+        <h1 class="display fancy-title">狗狗之家</h1>
+
+
+
+        <div class="meta row center-v gap-sm">
+          <a href="#" class="author">Curated by jay <span class="pro">PRO</span></a>
+          <span class="dot" aria-hidden="true">•</span>
+        </div>
+
+        <figure class="hero-shot"><img src="assets/dog-8.jpg" alt="Canine Talent Hero"></figure>
+
+        <div class="quick row chips">
+          <a class="chip" href="#">#lovedogs</a>
+          <a class="chip" href="#">#FluffyBoss</a>
+          <a class="chip" href="#">#DoggoMood</a>
+          <a class="chip" href="#">#DogstagramVibes</a>
+          <a class="chip" href="#">#FurEverFriend</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">品種分類</h2>
+        <div class="shots-grid" id="dogShots">
+          <figure class="shot" data-label="臘腸狗">
+            <img src="assets/dog-1.jpg" alt="臘腸狗"><figcaption>臘腸狗</figcaption>
+          </figure>
+          <figure class="shot" data-label="黃金獵犬">
+            <img src="assets/dog-2.jpg" alt="黃金獵犬"><figcaption>黃金獵犬</figcaption>
+          </figure>
+          <figure class="shot" data-label="德國牧羊犬">
+            <img src="assets/dog-3.jpg" alt="德國牧羊犬"><figcaption>德國牧羊犬</figcaption>
+          </figure>
+          <figure class="shot" data-label="邊境牧羊犬">
+            <img src="assets/dog-4.jpg" alt="邊境牧羊犬"><figcaption>邊境牧羊犬</figcaption>
+          </figure>
+          <figure class="shot" data-label="哈士奇">
+            <img src="assets/dog-5.jpg" alt="哈士奇"><figcaption>哈士奇</figcaption>
+          </figure>
+          <figure class="shot" data-label="白色瑞士牧羊犬">
+            <img src="assets/dog-6.jpg" alt="白色瑞士牧羊犬"><figcaption>白色瑞士牧羊犬</figcaption>
+          </figure>
+          <figure class="shot" data-label="法國鬥牛犬">
+            <img src="assets/dog-7.jpg" alt="法國鬥牛犬"><figcaption>法國鬥牛犬</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  <!-- About Me -->
+<section id="about" class="section about">
+  <div class="container">
+    <h2 class="section-title">About Me</h2>
+
+    <div class="about-grid">
+      <!-- 你的照片（可換成 assets/me.jpg；沒放也不會壞） -->
+      <figure class="me">
+        <img src="assets/me.jpg" alt="網站作者的近照" loading="lazy"
+             onerror="this.style.display='none'">
+      </figure>
+
+      <article class="about-card" aria-labelledby="aboutTitle">
+        <h3 id="aboutTitle">哈囉，我是 Jay</h3>
+        <p>
+          我很喜歡狗，每次看到牠們或是跟牠們相處時，心情都會放鬆下來。
+          在低潮時都會療癒我的心靈。
+          這個網站想用照片與卡片來記錄目前喜歡的狗狗品種。
+        </p>
+
+
+        <div class="about-actions">
+          <a class="chip" href="mailto:hello@example.com" aria-label="寄信聯絡我">contact me</a>
+          <a class="chip" href="https://github.com/your-id" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+  
+  </main>
+
+  <script type="module" src="./dist/main.js"></script>
+</body>
+</html>
